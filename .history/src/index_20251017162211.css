@@ -41,30 +41,35 @@ html {
     --primary-800: #8c3f01;
     --primary-900: #6b3000;
 
-    --secondary-50: #eefae6;
-    --secondary-100: #cbefb1;
-    --secondary-200: #b2e88b;
-    --secondary-300: #8fdd55;
-    --secondary-400: #79d635;
-    --secondary-500: #58cc02;
-    --secondary-600: #50ba02;
-    --secondary-700: #3e9101;
-    --secondary-800: #307001;
-    --secondary-900: #255601;
-
+    --secondary-50: ;
+    --secondary-100: ;
+    --secondary-200: ;
+    --secondary-300: ;
+    --secondary-400: ;
+    --secondary-500: #aadc66;
+    --secondary-600: #e5f4d0;
+    --secondary-700: #799c48;
+    --secondary-800: ;
+    --secondary-900: ;
     /* -- neutral colors -- */
 
-    --offwhite-500: #f9f9f9;
+    --bege-500: #fdf7eb;
     --white: #ffffff;
-    --black-50: #eaeaea;
-    --black-100: #bebebd;
-    --black-200: #9e9e9d;
-    --black-300: #727271;
-    --black-400: #575655;
-    --black-500: #2d2c2b;
+    --black-500: #060606;
+    --black-400: #383838;
+    --black-300: #585858;
+    --black-200: #8c8c8c;
+    --black-100: #b2b2b2;
+    --black-50: #e6e6e6;
+
+    /* -- warn colors -- */
+
+    --yellow-500: #ffbf00;
+    --orange-500: #ff6600;
+    --red-500: #ff2f3d;
 
     /* ----- TYPE ----- */
-    --font-family: "Nunito Sans", sans-serif;
+    --font-family: "Open Sans", sans-serif;
 
     --font-size-extra-large: 88px;
     --font-size-large: 30px;
