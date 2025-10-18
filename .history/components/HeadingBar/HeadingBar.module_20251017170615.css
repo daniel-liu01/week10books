@@ -1,0 +1,19 @@
+.heading_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* centraliza verticalmente */
+    gap: var(--space-regular); /* espaço entre seta e título */
+    /* width: 393px;  <-- remova a largura fixa */
+    /* justify-content: space-between;  <-- não precisa aqui */
+}
+
+.heading_pageTitle {
+    color: var(--black-500);
+    font-size: var(--font-size-medium);
+    font-style: var(--font-style-normal);
+    font-weight: var(--font-weight-bold);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    white-space: nowrap; /* opcional: evita quebra do título */
+}

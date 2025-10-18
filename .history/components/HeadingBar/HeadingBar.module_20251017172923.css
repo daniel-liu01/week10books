@@ -1,0 +1,15 @@
+.heading_container {
+    display: flex !important;
+    flex-direction: row !important; /* garante linha */
+    align-items: center !important; /* alinha verticalmente */
+    gap: 8px !important;
+    flex-wrap: nowrap !important; /* impede quebra para 2ª linha */
+}
+
+.heading_pageTitle {
+    margin: 0 !important;
+    line-height: 1 !important;
+    white-space: nowrap; /* título não quebra */
+    font-weight: 700;
+    font-size: 1.6rem;
+}

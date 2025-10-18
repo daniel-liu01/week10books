@@ -1,0 +1,20 @@
+import styles from "./Simulation";
+import HeadingBar from "../../components/HeadingBar/HeadingBar";
+import Card from "../../components/Card/Card";
+import image from "./";
+
+function Simulation() {
+    return (
+        <div>
+            <HeadingBar />
+            <Card
+                image='Anna.png'
+                title='Hi, my name is Anna!'
+                description='Let’s understand everything 
+about careers in trades by simulating it.'
+            />
+        </div>
+    );
+}
+
+export default Simulation;

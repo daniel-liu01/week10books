@@ -1,0 +1,21 @@
+.arrow_container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: var(--space-medium);
+    height: var(--space-medium);
+}
+
+.arrow_icon {
+    color: var(--black-500);
+    width: var(--space-regular);
+    height: var(--space-regular);
+}
+
+.arrow_container:hover .arrow_icon {
+    color: var(--primary-500);
+}
