@@ -1,0 +1,97 @@
+/* ------------------------------------------------------ GENERAL STYLES ------------------------------------------------------ */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 393px;
+    height: 100%;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-large);
+}
+
+/* ------------------------------------------------------ VARIABLES ------------------------------------------------------ */
+:root {
+    /* ----- COLORS ----- */
+    --primary-50: #fff1e6;
+    --primary-100: #ffd4b0;
+    --primary-200: #ffbf8a;
+    --primary-300: #ffa155;
+    --primary-400: #ff8f34;
+    --primary-500: #ff7301;
+    --primary-600: #e86901;
+    --primary-700: #b55201;
+    --primary-800: #8c3f01;
+    --primary-900: #6b3000;
+
+    --secondary-50: #eefae6;
+    --secondary-100: #cbefb1;
+    --secondary-200: #b2e88b;
+    --secondary-300: #8fdd55;
+    --secondary-400: #79d635;
+    --secondary-500: #58cc02;
+    --secondary-600: #50ba02;
+    --secondary-700: #3e9101;
+    --secondary-800: #307001;
+    --secondary-900: #255601;
+    /* -- neutral colors -- */
+
+    --bege-500: #fdf7eb;
+    --white: #ffffff;
+    --black-500: #060606;
+    --black-400: #383838;
+    --black-300: #585858;
+    --black-200: #8c8c8c;
+    --black-100: #b2b2b2;
+    --black-50: #e6e6e6;
+
+    /* -- warn colors -- */
+
+    --yellow-500: #ffbf00;
+    --orange-500: #ff6600;
+    --red-500: #ff2f3d;
+
+    /* ----- TYPE ----- */
+    --font-family: "Open Sans", sans-serif;
+
+    --font-size-extra-large: 88px;
+    --font-size-large: 30px;
+    --font-size-extra-medium: 24px;
+    --font-size-medium: 20px;
+    --font-size-regular: 16px;
+    --font-size-small: 12px;
+    --font-size-extra-small: 10px;
+
+    --font-style-normal: normal;
+    --font-weight-bold: bold;
+
+    --line-height-xxlarge: 100px;
+    --line-height-large: 36px;
+    --line-height-medium: 28px;
+    --line-height-small: 20px;
+
+    /* ----- SPACING ----- */
+    --space-extra-small: 4px;
+    --space-small: 8px;
+    --space-regular: 16px;
+    --space-medium: 32px;
+    --space-large: 48px;
+    --space-extra-large: 140px;
+}

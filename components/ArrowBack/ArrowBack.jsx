@@ -1,0 +1,22 @@
+import styles from "./ArrowBack.module.css";
+
+function ArrowBack() {
+    return (
+        <div className={styles.arrow_container}>
+            <svg
+                className={styles.arrow_icon}
+                xmlns='http://www.w3.org/2000/svg'
+                width='16'
+                height='16'
+                viewBox='0 0 12 20'
+                fill='none'>
+                <path
+                    d='M10.7071 19.2929C10.3166 19.6834 9.68342 19.6834 9.29289 19.2929L0.707106 10.7071C0.316582 10.3166 0.316583 9.68342 0.707107 9.29289L9.29289 0.707106C9.68342 0.316582 10.3166 0.316582 10.7071 0.707107L11.0679 1.06789C11.4584 1.45842 11.4584 2.09158 11.0679 2.48211L3.55 10L11.0679 17.5179C11.4584 17.9084 11.4584 18.5416 11.0679 18.9321L10.7071 19.2929Z'
+                    fill='currentColor'
+                />
+            </svg>
+        </div>
+    );
+}
+
+export default ArrowBack;

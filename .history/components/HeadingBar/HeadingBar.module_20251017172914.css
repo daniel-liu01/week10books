@@ -1,0 +1,15 @@
+.heading_container {
+    display: flex !important;
+    flex-direction: row !important; /* garante linha */
+    align-items: center !important; /* alinha verticalmente */
+    gap: 8px !important;
+    flex-wrap: nowrap !important; /* impede quebra para 2ª linha */
+}
+
+.heading_pageTitle {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-extra-medium);
+    margin: 0;
+    line-height: 1;
+    color: var(--black-500);
+}

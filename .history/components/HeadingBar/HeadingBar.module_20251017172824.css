@@ -1,0 +1,13 @@
+.heading_container {
+    display: flex;
+    align-items: center;
+    gap: ;
+}
+
+.heading_pageTitle {
+    font-weight: var(--font-weight-bold);
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1;
+    color: var(--black-500);
+}

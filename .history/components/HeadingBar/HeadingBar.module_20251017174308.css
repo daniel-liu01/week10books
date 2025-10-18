@@ -1,0 +1,25 @@
+.heading_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-small);
+    margin: 0;
+    padding: 0;
+}
+
+.heading_pageTitle {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-extra-medium);
+    margin: 0;
+    line-height: 1;
+    color: var(--black-500);
+}
+
+.heading_placeholder {
+    .placeholder {
+        width: 24px; /* mesma largura da seta */
+        height: 24px;
+        visibility: hidden; /* invisível, mas ocupa espaço */
+    }
+}
