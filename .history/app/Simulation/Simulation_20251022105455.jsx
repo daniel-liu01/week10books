@@ -10,6 +10,10 @@ function Simulation() {
     return (
         <div className={styles.container}>
             <StatusBar />
+            <InfoModal
+                type='badge'
+                title='Some title'
+            />
             <HeadingBar />
             <Card
                 image='Anna.png'
@@ -21,13 +25,6 @@ function Simulation() {
                     </>
                 }
             />
-            <InfoModal
-                imgsrc='./Industrial.svg'
-                type='badge'
-                title='You’ve got a new badge!'
-                description='You completed your apprenticeship and unlocked a new badge. It will be visible on your profile.'
-            />
-            <InfoModal type='salary' />
             <Button
                 type='primary'
                 size='large'

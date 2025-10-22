@@ -22,12 +22,11 @@ function Simulation() {
                 }
             />
             <InfoModal
-                imgsrc='./Industrial.svg'
-                type='badge'
-                title='You’ve got a new badge!'
-                description='You completed your apprenticeship and unlocked a new badge. It will be visible on your profile.'
+                imgsrc='/Anna.png'
+                type='salary'
+                title='Some title'
+                description='some description goes here'
             />
-            <InfoModal type='salary' />
             <Button
                 type='primary'
                 size='large'

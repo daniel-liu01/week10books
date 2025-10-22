@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--space-small);
+    background: var(--white);
+    box-shadow: var(--inner-shadow) inset;
+    padding: var(--space-regular);
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.info_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.image {
+    width: 82px;
+    height: 80px;
+}
+.title {
+    font-family: var(--font-family);
+    font-size: var(--space-regular);
+    font-weight: var(--font-weight-bold);
+    gap: 0px;
+    margin: 0px;
+    padding: var(--space-regular);
+}
+.description {
+    font-family: var(--font-family);
+    font-size: var(--space-regular);
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container_salary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: var(--space-small);
+    background: var(--white);
+    box-shadow: var(--inner-shadow) inset;
+    padding: var(--space-regular);
+}
+.bar {
+    background-color: var(--secondary-200);
+    height: var(--space-small);
+    border-radius: var(--space-small);
+    margin-bottom: var(--space-regular);
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+}
+.bar_filled {
+    background-color: var(--secondary-600);
+    width: 60%;
+    height: var(--space-small);
+    border-radius: var(--space-small);
+    margin-bottom: var(--space-regular);
+    transition: width 0.3s ease-in-out;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.text_info_container {
+    display: flex;
+    flex-direction: row;
+}
+.title_container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-regular);
+    align-items: center;
+}
+
+.salary_container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-regular);
+    align-items: center;
+}
+
+.close {
+    display: flex;
+    align-self: flex-end;
+}
+
+.salary {
+    font-family: var(--font-family);
+    font-size: var(--space-regular);
+    font-weight: var(--font-weight-bold);
+    text-align: right;
+}
+.salary_text_container {
+    width: 100%;
+    text-align: right;
+}
+.level_info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: var(--space-small);
+}
+
+.label {
+    font-family: var(--font-family);
+    font-size: var(--space-small);
+    color: var(--black-200);
+}
