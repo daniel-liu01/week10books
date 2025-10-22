@@ -16,7 +16,7 @@ function PopUp() {
                         about careers in trades by simulating it.
                     </>
                 }
-                image='/Electrician.svg'
+                image='/Eletrician.svg'
                 type='button'
                 valueOfButton='Get Certified'
                 typeOfButton='primary'

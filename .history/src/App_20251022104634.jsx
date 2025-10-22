@@ -8,7 +8,7 @@ import SimulationChat from "../app/SimulationChat/SimulationChat";
 function App() {
     return (
         <div>
-            <SimulationChat />
+            <Simulation />
         </div>
     );
 }

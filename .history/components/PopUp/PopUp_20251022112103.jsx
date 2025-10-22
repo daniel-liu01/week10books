@@ -4,11 +4,7 @@ function PopUp() {
     return (
         <div>
             <Card
-                title={
-                    <>
-                        Certificate of Qualification <br /> (C of Q) exam.
-                    </>
-                }
+                title='Certificate of Qualification (C of Q) exam.'
                 description={
                     <>
                         You completed your apprenticeship and unlocked
@@ -16,11 +12,8 @@ function PopUp() {
                         about careers in trades by simulating it.
                     </>
                 }
-                image='/Electrician.svg'
+                image='/'
                 type='button'
-                valueOfButton='Get Certified'
-                typeOfButton='primary'
-                sizeOfButton='large'
             />
         </div>
     );
