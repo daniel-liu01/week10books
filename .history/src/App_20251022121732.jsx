@@ -11,6 +11,8 @@ function App() {
     return (
         <div>
             <TextField />
+            <Card />
+            <Simulation />
         </div>
     );
 }

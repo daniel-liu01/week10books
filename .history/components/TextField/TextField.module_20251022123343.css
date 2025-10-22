@@ -1,0 +1,11 @@
+.textfield {
+    font-family: var(--font-family);
+    font-size: var(font-size-small);
+    font-style: var(--font-style-normal);
+}
+
+.input {
+    padding: var(--space-small);
+    outline: none;
+    border: none;
+}
