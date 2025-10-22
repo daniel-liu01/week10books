@@ -1,6 +1,7 @@
 .container {
     display: flex;
     width: 100%;
+    flex-direction: row;
     height: var(--space-large);
     justify-content: center;
     align-items: center;
@@ -9,3 +10,7 @@
     background: var(--white);
     box-shadow: var(--inner-shadow) inset;
 }
+.icon_container{
+    padding: var(--space-small);
+}
+
