@@ -4,7 +4,6 @@ import HeadingBar from "../../components/HeadingBar/HeadingBar";
 import Card from "../../components/Card/Card";
 import Button from "../../components/Button/Button";
 import Menu from "../../components/Menu/Menu";
-import InfoModal from "../../components/InfoModal/InfoModal";
 
 function Simulation() {
     return (

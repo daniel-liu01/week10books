@@ -1,15 +1,7 @@
 import styles from "./Card.module.css";
 import Button from "../../components/Button/Button";
 
-function Card({
-    image,
-    title,
-    description,
-    type,
-    valueOfButton,
-    typeOfButton,
-    sizeOfButton,
-}) {
+function Card({ image, title, description, type, value }) {
     return (
         <>
             {type === "regular" && (
