@@ -1,0 +1,20 @@
+.containerAi,
+.containerUser {
+    border-radius: 12px;
+    padding: 
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    box-shadow: var(--inner-shadow) inset;
+}
+
+.containerAi {
+    background-color: var(--black-50);
+    width: 318px;
+    height: 80px;
+}
+
+.textAI {
+    color: var(--black-500);
+    font-size: var(--font-size-small);
+}

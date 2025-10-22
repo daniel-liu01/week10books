@@ -1,0 +1,34 @@
+.containerAi,
+.containerUser {
+    border-top-right-radius: var(--space-small);
+    border-bottom-right-radius: var(--space-small);
+    border-bottom-left-radius: var(--space-small);
+    padding: var(--space-regular);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--inner-shadow) inset;
+}
+
+.containerAi {
+    background-color: var(--black-50);
+    width: 318px;
+    height: 80px;
+}
+
+.textAi {
+    color: var(--black-500);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+}
+
+.containerAi {
+    background-color: var(--black-50);
+    width: 318px;
+    height: 80px;
+}
+
+.textUser {
+    color: var(--white);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+}
