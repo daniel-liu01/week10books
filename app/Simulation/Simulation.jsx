@@ -28,7 +28,7 @@ function Simulation() {
                 onClick={() => console.log("clicked")}
                 isDisabled={false}
             />
-            <Menu />
+            
         </div>
     );
 }
