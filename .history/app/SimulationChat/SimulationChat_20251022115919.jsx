@@ -14,8 +14,8 @@ function SimulationChat() {
                 title='Narrative Title Here'
                 description='She looked down at her hands, calloused just slightly from the weeks she’d spent tinkering with broken lamps, rewiring outlets in her uncle’s garage, and flipping through thick manuals late at night. Her mind had been circling the idea for a while now, even if she hadn’t said it out loud until this moment.'
             />
-            <PopUp />
             <Menu />
+            <PopUp />
         </div>
     );
 }
