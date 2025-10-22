@@ -1,0 +1,11 @@
+.containerAi {
+    background-color: var(--black-50);
+    color: var(--black-500);
+    width: 318px;
+    height: 80px;
+    box-shadow: var(--inner-shadow) inset;
+}
+
+.textAI{
+    
+}

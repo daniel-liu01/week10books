@@ -11,6 +11,12 @@ function App() {
     return (
         <div>
             <SimulationChat />
+            <TextBubble
+                textType='ai'
+                text='If you were me… would you choose the path that helps you find yourself, or the one that helps you find others?'
+            />
+            <TextBubble text='If you were me… would you choose the path that helps you find yourself, or the one that helps you find others?' />
+            <Card />
         </div>
     );
 }
