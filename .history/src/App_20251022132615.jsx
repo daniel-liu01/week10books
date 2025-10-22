@@ -11,10 +11,7 @@ function App() {
     return (
         <div>
             <SimulationChat />
-            <TextBubble
-                textType='ai'
-                text='sjdnakndkjandkasasjkd'
-            />
+            <TextBubble />
         </div>
     );
 }

@@ -4,11 +4,9 @@ import AnnaAvatar from "../AnnaAvatar/AnnaAvatar";
 export default function TextBubble({ textType, text }) {
     if (textType === "ai") {
         return (
-            <div className={styles.container}>
+            <div className={styles.containerAi}>
                 <AnnaAvatar />
-                <div className={styles.containerAi}>
-                    <p className={styles.textAi}>{text}</p>
-                </div>
+                <p className={styles.textAi}>{text}</p>
             </div>
         );
     }

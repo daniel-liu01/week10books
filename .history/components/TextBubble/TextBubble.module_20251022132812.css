@@ -31,12 +31,6 @@
 .textUser {
     color: var(--white);
     font-size: var(--font-size-small);
-    font-weight: var(--font-weight-bold);
-}
-
-.container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: var(--space-small);
+    font-weigh
+    t: var(--font-weight-bold);
 }
