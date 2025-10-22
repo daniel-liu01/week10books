@@ -1,0 +1,23 @@
+.textfield {
+    font-family: var(--font-family);
+    font-size: var(font-size-small);
+    font-style: var(--font-style-normal);
+}
+
+.input {
+    padding: var(--space-small);
+    border: none;
+    box-shadow: var(--inner-shadow) inset;
+    border-radius: 8px;
+    padding-right: 40px;
+}
+svg {
+    right: 4px;
+    display: flex;
+}
+
+.send {
+    background: none;
+    border: none;
+    position: inherit;
+}

@@ -4,25 +4,14 @@ import "./App.css";
 
 import Simulation from "../app/Simulation/Simulation";
 import SimulationChat from "../app/SimulationChat/SimulationChat";
-
 import TextField from "../components/TextField/TextField";
-
-import TextBubble from "../components/TextBubble/TextBubble";
-
 import Card from "../components/Card/Card";
 
 function App() {
     return (
         <div>
-
+            <Simulation />
             <TextField />
-
-            <SimulationChat />
-            <TextBubble
-                textType='ai'
-                text='sjdnakndkjandkasasjkd'
-            />
-
         </div>
     );
 }

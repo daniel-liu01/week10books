@@ -1,0 +1,40 @@
+.textfield {
+    font-family: var(--font-family);
+    font-size: var(font-size-small);
+    font-style: var(--font-style-normal);
+    position: relative;
+}
+
+.input {
+    padding: var(--space-small);
+    border: none;
+    box-shadow: var(--inner-shadow) inset;
+    border-radius: 8px;
+    padding-right: 40px;
+    width: 100%;
+}
+svg {
+    right: 4px;
+    display: flex;
+}
+
+.send {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.send:hover svg path {
+    fill: var(--secondary-900);
+}
