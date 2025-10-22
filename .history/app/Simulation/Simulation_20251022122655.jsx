@@ -12,7 +12,7 @@ function Simulation() {
             <StatusBar />
             <HeadingBar />
             <Card
-                image='/Anna.svg'
+                image='Anna.png'
                 title='Hi, my name is Anna!'
                 description={
                     <>
@@ -20,6 +20,12 @@ function Simulation() {
                         about careers in trades by simulating it.
                     </>
                 }
+            />
+            <InfoModal
+                imgsrc='/Anna.png'
+                type='badge'
+                title='You’ve got a new badge!'
+                description='You completed your apprenticeship and unlocked a new badge. It will be visible on your profile.'
             />
             <Button
                 type='primary'

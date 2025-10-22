@@ -12,7 +12,7 @@ function Simulation() {
             <StatusBar />
             <HeadingBar />
             <Card
-                image='/Anna.svg'
+                image='Anna.png'
                 title='Hi, my name is Anna!'
                 description={
                     <>
@@ -20,6 +20,12 @@ function Simulation() {
                         about careers in trades by simulating it.
                     </>
                 }
+            />
+            <InfoModal
+                imgsrc='/Anna.png'
+                type='badge'
+                title='Some title'
+                description='some description goes here'
             />
             <Button
                 type='primary'

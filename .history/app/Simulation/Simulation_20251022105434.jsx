@@ -10,9 +10,10 @@ function Simulation() {
     return (
         <div className={styles.container}>
             <StatusBar />
+            <InfoModal />
             <HeadingBar />
             <Card
-                image='/Anna.svg'
+                image='Anna.png'
                 title='Hi, my name is Anna!'
                 description={
                     <>
