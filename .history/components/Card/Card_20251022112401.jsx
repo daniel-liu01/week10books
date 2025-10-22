@@ -8,7 +8,7 @@ function Card({
     type,
     valueOfButton,
     typeOfButton,
-    sizeOfButton,
+    valueOfButton,
 }) {
     return (
         <>

@@ -11,7 +11,7 @@ function Simulation() {
             <StatusBar />
             <HeadingBar />
             <Card
-                image='/Anna.svg'
+                image='/Anna.png'
                 title='Hi, my name is Anna!'
                 description={
                     <>

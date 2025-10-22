@@ -1,15 +1,7 @@
 import styles from "./Card.module.css";
 import Button from "../../components/Button/Button";
 
-function Card({
-    image,
-    title,
-    description,
-    type,
-    valueOfButton,
-    typeOfButton,
-    sizeOfButton,
-}) {
+function Card({ image, title, description, type, value }) {
     return (
         <>
             {type === "regular" && (
@@ -47,7 +39,7 @@ function Card({
                     <Button
                         type={typeOfButton}
                         size={sizeOfButton}
-                        value={valueOfButton}
+                        value='Start Simulation'
                         onClick={() => console.log("clicked")}
                         isDisabled={false}
                     />

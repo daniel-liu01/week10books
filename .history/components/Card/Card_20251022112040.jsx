@@ -1,15 +1,7 @@
 import styles from "./Card.module.css";
 import Button from "../../components/Button/Button";
 
-function Card({
-    image,
-    title,
-    description,
-    type,
-    valueOfButton,
-    typeOfButton,
-    sizeOfButton,
-}) {
+function Card({ image, title, description, type }) {
     return (
         <>
             {type === "regular" && (
@@ -29,7 +21,7 @@ function Card({
                     )}
                 </div>
             )}
-            {type === "button" && (
+            {type === "button included" && (
                 <div className={styles.container}>
                     <div className={styles.content}>
                         <h3 className={styles.title}>{title}</h3>
@@ -45,9 +37,9 @@ function Card({
                         </div>
                     )}
                     <Button
-                        type={typeOfButton}
-                        size={sizeOfButton}
-                        value={valueOfButton}
+                        type='primary'
+                        size='large'
+                        value='Start Simulation'
                         onClick={() => console.log("clicked")}
                         isDisabled={false}
                     />
