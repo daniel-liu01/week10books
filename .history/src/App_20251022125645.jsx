@@ -15,6 +15,7 @@ function App() {
                 text='If you were me… would you choose the path that helps you find yourself, or the one that helps you find others?'
             />
             <TextBubble
+                //if 
                 text='If you were me… would you choose the path that helps you find yourself, or the one that helps you find others?'
             />
         </div>

@@ -22,7 +22,6 @@
 }
 
 .containerUser {
-    border-top-left-radius: var(--space-small);
     background-color: var(--primary-500);
     width: 318px;
     height: 80px;

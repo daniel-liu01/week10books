@@ -8,11 +8,10 @@ export default function TextBubble({ textType, text }) {
             </div>
         );
     }
-
     return (
         <>
             <div className={styles.containerUser}>
-                <p className={styles.textUser}>{text}</p>
+                <p className={styles.textUser}>{text}}</p>
             </div>
         </>
     );

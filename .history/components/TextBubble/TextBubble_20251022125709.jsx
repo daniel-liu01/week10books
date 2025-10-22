@@ -8,7 +8,7 @@ export default function TextBubble({ textType, text }) {
             </div>
         );
     }
-
+    
     return (
         <>
             <div className={styles.containerUser}>

@@ -1,5 +1,6 @@
 .containerAi,
 .containerUser {
+    border-top-right-radius: var(--space-small);
     border-bottom-right-radius: var(--space-small);
     border-bottom-left-radius: var(--space-small);
     padding: var(--space-regular);
@@ -9,7 +10,6 @@
 }
 
 .containerAi {
-    border-top-right-radius: var(--space-small);
     background-color: var(--black-50);
     width: 318px;
     height: 80px;
@@ -19,13 +19,6 @@
     color: var(--black-500);
     font-size: var(--font-size-small);
     font-weight: var(--font-weight-bold);
-}
-
-.containerUser {
-    border-top-left-radius: var(--space-small);
-    background-color: var(--primary-500);
-    width: 318px;
-    height: 80px;
 }
 
 .textUser {

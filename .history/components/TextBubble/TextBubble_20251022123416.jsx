@@ -1,6 +1,6 @@
 import styles from "./TextBubble.module.css";
 
-export default function TextBubble({ textType, text }) {
+export default function TextBubble({ textType, text}) {
     if (textType === "ai") {
         return (
             <div className={styles.containerAi}>
@@ -8,11 +8,12 @@ export default function TextBubble({ textType, text }) {
             </div>
         );
     }
-
     return (
         <>
             <div className={styles.containerUser}>
-                <p className={styles.textUser}>{text}</p>
+                <p className={styles.textUser}>
+                    I want to know the income for industrial eletrician
+                </p>
             </div>
         </>
     );
