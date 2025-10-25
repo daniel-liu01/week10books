@@ -47,10 +47,7 @@ function Homepage() {
                     {/* <SeeAll /> */}
                 </div>
                 <div className={styles.explore_map}>
-                    <img
-                        src='Map.png'
-                        alt='Explore map'
-                    />
+                    <img src='Map.png' />
                 </div>
             </div>
             <Menu />

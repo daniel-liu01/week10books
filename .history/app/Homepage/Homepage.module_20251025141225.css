@@ -1,4 +1,4 @@
-.container {
+homepage.module.css .container {
     display: flex;
     flex-direction: column;
     gap: var(--space-regular);
