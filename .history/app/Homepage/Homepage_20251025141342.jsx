@@ -46,12 +46,7 @@ function Homepage() {
                     <h3 className={styles.card_title}>Explore new careers</h3>
                     {/* <SeeAll /> */}
                 </div>
-                <div className={styles.explore_map}>
-                    <img
-                        src='Map.png'
-                        alt='Explore map'
-                    />
-                </div>
+                <div className={styles.explore_map}>{/* <Map/> */}</div>
             </div>
             <Menu />
         </div>
