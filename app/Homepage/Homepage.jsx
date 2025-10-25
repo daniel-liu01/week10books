@@ -13,7 +13,7 @@ function Homepage() {
             </div>
             {/* <TabMenu /> */}
 
-            <div className={styles.career_sim}>
+            <div className={styles.section}>
                 <h3 className={styles.card_title}>
                     Simulate a career in trade
                 </h3>
@@ -28,7 +28,7 @@ function Homepage() {
                 />
             </div>
 
-            <div className={styles.my_path}>
+            <div className={styles.section}>
                 <div className={styles.card_header}>
                     <h3 className={styles.card_title}>My Pathways</h3>
                     {/* <SeeAll /> */}
@@ -41,7 +41,7 @@ function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className={styles.explore}>
+            <div className={styles.section}>
                 <div className={styles.card_header}>
                     <h3 className={styles.card_title}>Explore new careers</h3>
                     {/* <SeeAll /> */}
