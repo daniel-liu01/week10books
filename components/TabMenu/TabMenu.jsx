@@ -7,21 +7,21 @@ export default function TabMenu() {
   return (
     <div className={styles.tabMenu}>
       <button
-        className={`${styles.tab} ${activeTab === "pathways" ? styles.active : ""}`}
+        className={`${styles.tab} ${activeTab === "pathways" ? styles.activeTab : ""}`}
         onClick={() => setActiveTab("pathways")}
       >
         Your Pathways
       </button>
 
       <button
-        className={`${styles.tab} ${activeTab === "demand" ? styles.active : ""}`}
+        className={`${styles.tab} ${activeTab === "demand" ? styles.activeTab : ""}`}
         onClick={() => setActiveTab("demand")}
       >
         In Demand
       </button>
 
       <button
-        className={`${styles.tab} ${activeTab === "jobs" ? styles.active : ""}`}
+        className={`${styles.tab} ${activeTab === "jobs" ? styles.activeTab : ""}`}
         onClick={() => setActiveTab("jobs")}
       >
         Job Opportunities
