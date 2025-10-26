@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import styles from "./Homepage.module.css";
 import StatusBar from "../../components/StatusBar/StatusBar";
 import Card from "../../components/Card/Card";
@@ -13,7 +15,7 @@ function Homepage() {
             </div>
             {/* <TabMenu /> */}
 
-            <div className={styles.section}>
+            <div className={styles.career_sim}>
                 <h3 className={styles.card_title}>
                     Simulate a career in trade
                 </h3>
@@ -28,7 +30,7 @@ function Homepage() {
                 />
             </div>
 
-            <div className={styles.section}>
+            <div className={styles.my_path}>
                 <div className={styles.card_header}>
                     <h3 className={styles.card_title}>My Pathways</h3>
                     {/* <SeeAll /> */}
@@ -41,17 +43,12 @@ function Homepage() {
                     </div>
                 </div>
             </div>
-            <div className={styles.section}>
+            <div className={styles.explore}>
                 <div className={styles.card_header}>
                     <h3 className={styles.card_title}>Explore new careers</h3>
                     {/* <SeeAll /> */}
                 </div>
-                <div className={styles.explore_map}>
-                    <img
-                        src='Map.png'
-                        alt='Explore map'
-                    />
-                </div>
+                <div className={styles.explore_map}>{/* <Map/> */}</div>
             </div>
             <Menu />
         </div>
