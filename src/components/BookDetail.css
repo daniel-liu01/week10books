@@ -1,6 +1,6 @@
 .book-detail-overlay {
   position: fixed;
-  top: 0;
+  top: 8em;
   left: 0;
   width: 100%;
   height: 100vh;
@@ -46,7 +46,6 @@
   background: #902f4a;
 }
 
-/* LEFT SIDE — book image or placeholder */
 .book-detail-left {
   flex: 1 1 40%;
   display: flex;

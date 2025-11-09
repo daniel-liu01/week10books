@@ -1,14 +1,23 @@
 import React from "react";
 import "./BookDetail.css";
+import Book from "../Book";
 
-export default function BookDetail({ book, onClose }) {
+export default function BookDetail({ book, allBooks = [], onClose }) {
   if (!book) return null;
+
+  // ✅ Find similar books (same author or language)
+  const similarBooks = allBooks.filter(
+    (b) =>
+      b.id !== book.id && // exclude current book
+      (b.author === book.author || b.language === book.language)
+  );
 
   return (
     <div className="book-detail-overlay">
-      <div>
-        <h3>Books</h3>
+      <div className="book-detail-header">
+        <h3>Book Details</h3>
       </div>
+
       <div className="book-detail-content">
         <button className="close-btn" onClick={onClose}>
           ✕
@@ -46,8 +55,33 @@ export default function BookDetail({ book, onClose }) {
           )}
         </div>
       </div>
+
+      {/* ✅ Similar books section */}
       <div className="similar-books">
         <h3>Similar Books</h3>
+        <div className="similar-books-list">
+          {similarBooks.length > 0 ? (
+            similarBooks.map((b) => (
+              <div
+                key={b.id}
+                className="similar-book-card"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                <img
+                  src={
+                    b.url || "https://via.placeholder.com/120x180?text=No+Image"
+                  }
+                  alt={b.title}
+                  className="similar-book-img"
+                />
+                <p className="similar-book-title">{b.title}</p>
+                <p className="similar-book-author">{b.author}</p>
+              </div>
+            ))
+          ) : (
+            <p>No similar books found.</p>
+          )}
+        </div>
       </div>
     </div>
   );

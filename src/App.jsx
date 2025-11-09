@@ -108,7 +108,7 @@ function App() {
             <div
               key={book.id}
               className={`book ${selectedBookId === book.id ? "selected" : ""}`}
-              onClick={() => setSelectedBook(book)} // 👈 open popup
+              onClick={() => toggleSelectBook(book.id)} // select/deselect
               style={{ position: "relative", cursor: "pointer" }}
             >
               <img
@@ -127,6 +127,17 @@ function App() {
               <p>{book.publicationYear}</p>
               <p>{book.language}</p>
               <p>{book.pages}</p>
+
+              {/* Details button */}
+              <button
+                className="details-button"
+                onClick={(e) => {
+                  e.stopPropagation(); // prevent selecting the card
+                  setSelectedBook(book);
+                }}
+              >
+                Details
+              </button>
             </div>
           ))}
         </div>
@@ -134,7 +145,11 @@ function App() {
 
       {/* 👇 Book Detail Popup */}
       {selectedBook && (
-        <BookDetail book={selectedBook} onClose={() => setSelectedBook(null)} />
+        <BookDetail
+          book={selectedBook}
+          allBooks={books}
+          onClose={() => setSelectedBook(null)}
+        />
       )}
 
       <footer className="footer">
