@@ -1,33 +1,134 @@
-import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./App.css";
-
-import Simulation from "../app/Simulation/Simulation";
-import SimulationChat from "../app/SimulationChat/SimulationChat";
-
-import TextField from "../components/TextField/TextField";
-
-import TextBubble from "../components/TextBubble/TextBubble";
-import TabMenu from "../components/TabMenu/TabMenu";
-import Card from "../components/Card/Card";
-import Homepage from "../app/Homepage/Homepage";
+import Modal from "./components/Modal.jsx";
+import BookForm from "./components/BookForm.jsx";
+import Filter from "./components/Filter.jsx";
+import ManageLoans from "./components/ManageLoans.jsx";
+import Overlay from "./components/Overlay.jsx";
+import Book from "./Book.jsx";
 
 function App() {
-    return (
-        <div>
+  const [books, setBooks] = useState(() => {
+    const stored = localStorage.getItem("books");
+    return stored ? JSON.parse(stored) : [];
+  });
 
-            <TextField />
+  const [selectedBookId, setSelectedBookId] = useState(null);
+  const [publisher, setPublisher] = useState("All");
+  const [language, setLanguage] = useState("All");
+  const [showOverlay, setShowOverlay] = useState(false);
 
-            <SimulationChat />
-            <TextBubble
-                textType='ai'
-                text='sjdnakndkjandkasasjkd'
-            />
-            <TabMenu />
-            <Homepage />
-        </div>
-    
+  useEffect(() => {
+    localStorage.setItem("books", JSON.stringify(books));
+  }, [books]);
+
+  const allBooks = [...books];
+
+  const uniqueLanguages = Array.from(
+    new Set(
+      allBooks
+        .map((b) => b.language)
+        .filter((l) => l && l.trim() !== "" && l.trim().toLowerCase() !== "all")
+    )
+  );
+
+  const filteredBooks = allBooks.filter(
+    (book) =>
+      (publisher === "All" || book.publisher === publisher) &&
+      (language === "All" || book.language === language)
+  );
+
+  function addBook(book) {
+    setBooks([...books, book]);
+  }
+
+  function deleteBook(id) {
+    const updated = books.filter((b) => b.id !== id);
+    setBooks(updated);
+  }
+
+  function toggleSelectBook(id) {
+    setSelectedBookId((prev) => (prev === id ? null : id));
+  }
+
+  function handleDeleteSelected() {
+    if (!selectedBookId) return;
+    const updatedBooks = books.filter((book) => book.id !== selectedBookId);
+    setBooks(updatedBooks);
+    setSelectedBookId(null);
+  }
+
+  function updateBookStatus(id, newStatus) {
+    const updatedBooks = books.map((book) =>
+      book.id === id ? { ...book, status: newStatus } : book
     );
+    setBooks(updatedBooks);
+  }
+
+  return (
+    <div className="app-container">
+      <h1 className="title">Book Catalog</h1>
+      <div className="header">
+        <ManageLoans onClick={() => setShowOverlay(true)} />
+
+        <Filter
+          filters={[
+            {
+              label: "Language",
+              options: uniqueLanguages, // Removed 'All' from here
+              selected: language,
+              onChange: setLanguage,
+            },
+          ]}
+        />
+
+        {showOverlay && (
+          <Overlay
+            books={books}
+            onClose={() => setShowOverlay(false)}
+            updateBookStatus={updateBookStatus}
+          />
+        )}
+      </div>
+      <div className="books">
+        <Modal
+          btnLabel="New"
+          btnClassName="new-button"
+          onDelete={handleDeleteSelected}
+        >
+          <BookForm add={addBook} />
+        </Modal>
+
+        <div className="book-list">
+          {filteredBooks.map((book) => (
+            <div
+              key={book.id}
+              className={`book ${selectedBookId === book.id ? "selected" : ""}`}
+              onClick={() => toggleSelectBook(book.id)}
+              style={{ position: "relative" }} 
+            >
+              <img src={book.url} alt={book.title} className="book-cover" />
+
+              {book.status === "On Loan" && (
+                <div className="status-badge">On Loan</div>
+              )}
+
+              <p>{book.title}</p>
+              <p>{book.author}</p>
+              <p>{book.publisher}</p>
+              <p>{book.publicationYear}</p>
+              <p>{book.language}</p>
+              <p>{book.pages}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <footer className="footer">
+        <p className="footer-content">© Daniel Liu, 2025</p>
+      </footer>
+    </div>
+  );
 }
 
 export default App;

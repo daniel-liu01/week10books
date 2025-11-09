@@ -1,7 +1,0 @@
-.textfield {
-    font-family: var(--font-family);
-    font-size: var(font-size-small);
-    font-style: var(--font-style-normal);
-    box-shadow: var(--inner-shadow);
-    border: none;
-}
