@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./BookDetail.css";
 import Book from "../Book";
 
-export default function BookDetail({ book, allBooks = [], onClose }) {
-  if (!book) return null;
+export default function BookDetail({ book, onClose }) {
+  const [similarBooks, setSimilarBooks] = useState([]);
+  const [loading, setLoading] = useState(false);
 
-  // ✅ Find similar books (same author or language)
-  const similarBooks = allBooks.filter(
-    (b) =>
-      b.id !== book.id && // exclude current book
-      (b.author === book.author || b.language === book.language)
-  );
+  useEffect(() => {
+    if (!book) return;
+
+    const query = encodeURIComponent(book.author || book.title || "book");
+    const apiUrl = `https://api.itbook.store/1.0/search/${query}`;
+
+    setLoading(true);
+    fetch(apiUrl)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.books) {
+          // filter out the current book by title
+          const filtered = data.books.filter(
+            (b) => b.title.toLowerCase() !== (book.title || "").toLowerCase()
+          );
+          setSimilarBooks(filtered);
+        }
+      })
+      .catch((err) => console.error("Error fetching similar books:", err))
+      .finally(() => setLoading(false));
+  }, [book]);
+
+  if (!book) return null;
 
   return (
     <div className="book-detail-overlay">
       <div className="book-detail-header">
         <h3>Book Details</h3>
-      </div>
-
-      <div className="book-detail-content">
         <button className="close-btn" onClick={onClose}>
           ✕
         </button>
+      </div>
 
+      <div className="book-detail-content">
         <div className="book-detail-left">
           <img
             src={
@@ -56,31 +73,34 @@ export default function BookDetail({ book, allBooks = [], onClose }) {
         </div>
       </div>
 
-      {/* ✅ Similar books section */}
       <div className="similar-books">
         <h3>Similar Books</h3>
+
+        {loading && <p>Loading...</p>}
+
+        {!loading && similarBooks.length === 0 && (
+          <p>No similar books found.</p>
+        )}
+
         <div className="similar-books-list">
-          {similarBooks.length > 0 ? (
-            similarBooks.map((b) => (
-              <div
-                key={b.id}
-                className="similar-book-card"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                <img
-                  src={
-                    b.url || "https://via.placeholder.com/120x180?text=No+Image"
-                  }
-                  alt={b.title}
-                  className="similar-book-img"
-                />
-                <p className="similar-book-title">{b.title}</p>
-                <p className="similar-book-author">{b.author}</p>
-              </div>
-            ))
-          ) : (
-            <p>No similar books found.</p>
-          )}
+          {similarBooks.map((b) => (
+            <div
+              key={b.isbn13}
+              className="similar-book-card"
+              onClick={() => window.open(b.url, "_blank")} // open book details in new tab
+            >
+              <img
+                src={
+                  b.image || "https://via.placeholder.com/120x180?text=No+Image"
+                }
+                alt={b.title}
+                className="similar-book-img"
+              />
+              <p className="similar-book-title">{b.title}</p>
+              <p className="similar-book-author">{b.subtitle || b.authors}</p>
+              <p className="similar-book-price">{b.price}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
