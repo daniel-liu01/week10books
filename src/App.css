@@ -134,3 +134,39 @@ body {
     transform 0.1s ease;
   width: 100%;
 }
+
+.book-cover {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.book-info {
+  font-size: 0.8rem;
+  color: #555;
+  margin: 3px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 5px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.book-author {
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #333;
+  margin: 3px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

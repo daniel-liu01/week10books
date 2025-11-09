@@ -121,12 +121,12 @@ function App() {
                 <div className="status-badge">On Loan</div>
               )}
 
-              <p>{book.title}</p>
-              <p>{book.author}</p>
-              <p>{book.publisher}</p>
-              <p>{book.publicationYear}</p>
-              <p>{book.language}</p>
-              <p>{book.pages}</p>
+              <p className="book-title">{book.title}</p>
+              <p className="book-author">{book.author}</p>
+              <p className="book-info">{book.publisher}</p>
+              <p className="book-info">{book.publicationYear}</p>
+              <p className="book-info">{book.language}</p>
+              <p className="book-info">{book.pages}</p>
 
               {/* Details button */}
               <button
