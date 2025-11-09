@@ -13,6 +13,8 @@ export default function Overlay({ onClose, books, updateBookStatus }) {
       </div>
 
       <LoanBook books={books} updateBookStatus={updateBookStatus} />
+      
     </div>
+    
   );
 }

@@ -6,6 +6,7 @@ import Filter from "./components/Filter.jsx";
 import ManageLoans from "./components/ManageLoans.jsx";
 import Overlay from "./components/Overlay.jsx";
 import Book from "./Book.jsx";
+import BookDetail from "./components/BookDetail.jsx"; // 👈 added
 
 function App() {
   const [books, setBooks] = useState(() => {
@@ -14,6 +15,7 @@ function App() {
   });
 
   const [selectedBookId, setSelectedBookId] = useState(null);
+  const [selectedBook, setSelectedBook] = useState(null); // 👈 new state for popup
   const [publisher, setPublisher] = useState("All");
   const [language, setLanguage] = useState("All");
   const [showOverlay, setShowOverlay] = useState(false);
@@ -68,6 +70,7 @@ function App() {
   return (
     <div className="app-container">
       <h1 className="title">Book Catalog</h1>
+
       <div className="header">
         <ManageLoans onClick={() => setShowOverlay(true)} />
 
@@ -75,7 +78,7 @@ function App() {
           filters={[
             {
               label: "Language",
-              options: uniqueLanguages, // Removed 'All' from here
+              options: uniqueLanguages,
               selected: language,
               onChange: setLanguage,
             },
@@ -90,6 +93,7 @@ function App() {
           />
         )}
       </div>
+
       <div className="books">
         <Modal
           btnLabel="New"
@@ -104,10 +108,14 @@ function App() {
             <div
               key={book.id}
               className={`book ${selectedBookId === book.id ? "selected" : ""}`}
-              onClick={() => toggleSelectBook(book.id)}
-              style={{ position: "relative" }} 
+              onClick={() => setSelectedBook(book)} // 👈 open popup
+              style={{ position: "relative", cursor: "pointer" }}
             >
-              <img src={book.url} alt={book.title} className="book-cover" />
+              <img
+                src={book.url || "https://via.placeholder.com/150x200"}
+                alt={book.title}
+                className="book-cover"
+              />
 
               {book.status === "On Loan" && (
                 <div className="status-badge">On Loan</div>
@@ -123,6 +131,11 @@ function App() {
           ))}
         </div>
       </div>
+
+      {/* 👇 Book Detail Popup */}
+      {selectedBook && (
+        <BookDetail book={selectedBook} onClose={() => setSelectedBook(null)} />
+      )}
 
       <footer className="footer">
         <p className="footer-content">© Daniel Liu, 2025</p>

@@ -2,6 +2,12 @@
   font-family: "Roboto", Arial, sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 .books {
   display: flex;
   flex-direction: row;
